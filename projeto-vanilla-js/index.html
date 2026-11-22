@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aula 01 - Projeto Vanilla JS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-content">
+      <div>
+        <span class="badge">Aula 01 • Vanilla JS</span>
+        <h1>Painel de Estudos Front-end</h1>
+      </div>
+      <button id="toggle-theme" class="btn-secondary" type="button">
+        Alternar Tema
+      </button>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="card">
+      <h2>Adicionar Tópico de Estudo</h2>
+      <p class="subtitle">
+        Aplicação construída apenas com HTML, CSS e JavaScript puro (sem frameworks).
+      </p>
+
+      <form id="study-form" class="form">
+        <div class="field">
+          <label for="topic-title">Assunto</label>
+          <input
+            id="topic-title"
+            type="text"
+            placeholder="Ex.: Manipulação do DOM"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label for="topic-category">Categoria</label>
+          <select id="topic-category">
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Git & Deploy">Git &amp; Deploy</option>
+          </select>
+        </div>
+
+        <button class="btn-primary" type="submit">Adicionar Tópico</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="list-header">
+        <div>
+          <h2>Tópicos Cadastrados</h2>
+          <p id="stats-text" class="subtitle">0 tópicos</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filtrar tópicos">
+          <button class="filter-btn active" data-filter="all" type="button">Todos</button>
+          <button class="filter-btn" data-filter="pending" type="button">Pendentes</button>
+          <button class="filter-btn" data-filter="done" type="button">Concluídos</button>
+        </div>
+      </div>
+
+      <ul id="topic-list" class="topic-list"></ul>
+      <p id="empty-state" class="empty-state">Nenhum tópico encontrado para este filtro.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Atividade 01 — Frameworks Front-end (HTML + CSS + Vanilla JS)</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
